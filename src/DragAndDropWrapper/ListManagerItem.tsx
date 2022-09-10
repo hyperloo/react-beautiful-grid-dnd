@@ -6,7 +6,7 @@ export interface ListManagerItemProps {
   item: any;
   index: number;
   render(item: any): ReactElement<{}>;
-  disabledItems: Object;
+  disabledItems: boolean[];
   orginalIndex: number;
 }
 

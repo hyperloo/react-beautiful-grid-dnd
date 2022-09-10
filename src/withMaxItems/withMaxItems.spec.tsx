@@ -37,7 +37,7 @@ describe("withMaxItems", () => {
       items,
       maxItems: 2,
       onDragEnd: jest.fn(),
-      disabledItems: {}
+      disabledItems: []
     };
     const ComponentWithMaxItems = withMaxItems(Component, createId);
 

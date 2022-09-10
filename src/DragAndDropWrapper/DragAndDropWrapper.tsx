@@ -20,7 +20,7 @@ export interface Chunk {
 
 export interface Props {
   chunks: Chunk[];
-  disabledItems: Object;
+  disabledItems: boolean[];
   direction: "horizontal" | "vertical";
   render(item: any): ReactElement<{}>;
   onDragEnd(result: DragAndDropResult): void;
@@ -52,7 +52,14 @@ export const DragAndDropWrapper: React.StatelessComponent<Props> = ({
               {...provided.droppableProps}
             >
               {items.map((item: any, index: number) => (
-                <ListManagerItem key={hash(item)} item={item} index={index} orginalIndex={boardIndex*maxItems + index} render={render} disabledItems={disabledItems} />
+                <ListManagerItem
+                  key={hash(item)}
+                  item={item}
+                  index={index}
+                  orginalIndex={boardIndex * maxItems + index}
+                  render={render}
+                  disabledItems={disabledItems}
+                />
               ))}
               {provided.placeholder}
             </div>

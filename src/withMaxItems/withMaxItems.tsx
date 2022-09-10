@@ -26,7 +26,7 @@ export interface WithMaxItemsProps {
   items: any[];
   maxItems?: number;
   onDragEnd(sourceIndex: number, destinationIndex: number): void;
-  disabledItems: Object;
+  disabledItems: boolean[];
 }
 
 interface WithMaxItemsState {
